@@ -19,3 +19,13 @@ jobs:
     - name: List Files
       run: |
        echo "I am learning DevOps"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        python -m pip install flake8
+
+    - name: Test
+      run: |
+        pytest
